@@ -24,8 +24,8 @@ def perform_clustering(df):
 
     plt.figure(figsize=(8, 6))
     plt.scatter(principalComponents[:, 0], principalComponents[:, 1], c=clusters, cmap='viridis')
-    plt.xlabel('Principal Component 1')
-    plt.ylabel('Principal Component 2')
+    plt.xlabel('Socio-Economic Profile')
+    plt.ylabel('Demographic Characteristics')
     plt.title('Clusters')
     plt.show()
 
