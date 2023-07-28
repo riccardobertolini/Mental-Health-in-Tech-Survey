@@ -16,6 +16,7 @@ def perform_clustering(df):
 
     pca = PCA(n_components=2)
     principalComponents = pca.fit_transform(df_scaled)
+    # The PCA component labels are defined here
     principalDf = pd.DataFrame(data=principalComponents, columns=['Socio-Economic Profile', 'Demographic Characteristics'])
 
     kmeans = KMeans(n_clusters=3)
@@ -27,6 +28,7 @@ def perform_clustering(df):
     plt.xlabel('Socio-Economic Profile')
     plt.ylabel('Demographic Characteristics')
     plt.title('Clusters')
+
     plt.show()
 
     for i in range(3):

@@ -17,6 +17,10 @@ def chi_square_test(df_cluster, cluster):
 def main():
     df = pd.read_csv('data/survey.csv')
 
+    # Check for missing values and apply mean imputation to numeric columns
+    numeric_columns = df.select_dtypes(include='number').columns
+    df[numeric_columns] = df[numeric_columns].fillna(df[numeric_columns].mean())
+
     df_clustered, principal_df = perform_clustering(df)
 
     plt.figure(figsize=(8, 6))
@@ -33,3 +37,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
