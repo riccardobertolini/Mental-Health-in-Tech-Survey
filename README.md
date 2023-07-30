@@ -16,7 +16,7 @@ The project contains three main Python files: `clustering.py`, `visualization.py
 
 ## Requirements
 
-Python 3.x is required to run the code in this project. The following Python libraries are also required:
+Python 3.11.4 is required to run the code in this project. The following Python libraries are also required:
 numpy==1.21.0
 pandas==1.3.0
 scikit-learn==0.24.2
@@ -25,7 +25,7 @@ seaborn==0.11.1
 scipy==1.7.0
 
 
-You can install these libraries using pip:
+As first step, you need to install these libraries using pip:
 
 ```
 pip install -r requirements.txt
